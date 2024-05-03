@@ -13,7 +13,7 @@ import { useFormik } from 'formik';
 import { toast } from 'react-toastify';
 import Palette from '../../../../ui-component/ThemePalette';
 import Autocomplete from '@mui/material/Autocomplete';
-import Chip from '@material-ui/core/Chip';
+import Chip from '@mui/material/Chip';
 import { MeetingSchema } from 'schema';
 import { useEffect } from 'react';
 import { getApi, postApi } from 'views/services/api';

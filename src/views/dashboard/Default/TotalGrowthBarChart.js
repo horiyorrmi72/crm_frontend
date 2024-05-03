@@ -108,13 +108,13 @@ const TotalGrowthBarChart = ({ isLoading, propertyData, taskData, contactData, l
       {
         name: 'Data',
         data: [
-          leadData.length,
-          contactData.length,
-          propertyData.length,
-          taskData.length,
-          meetingData.length,
-          emailData.length,
-          callData.length
+          leadData?.length,
+          contactData?.length,
+          propertyData?.length,
+          taskData?.length,
+          meetingData?.length,
+          emailData?.length,
+          callData?.length
         ]
       }
     ]

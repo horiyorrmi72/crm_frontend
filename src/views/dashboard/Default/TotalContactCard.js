@@ -67,7 +67,7 @@ const ContactCard = ({ isLoading, contactData }) => {
               <Grid item>
                 <Grid container alignItems="center" justifyContent="center">
                   <Grid item>
-                    <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>{contactData.length}</Typography>
+                    <Typography sx={{ fontSize: '2.125rem', fontWeight: 500, mr: 1, mt: 1.75, mb: 0.75 }}>{contactData? contactData.length : 0}</Typography>
                   </Grid>
                   <Grid item>
                     <Avatar
