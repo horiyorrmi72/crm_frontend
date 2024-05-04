@@ -17,6 +17,7 @@ import Payments from 'views/Payments';
 import AdminProfile from 'views/AdminProfile/AdminProfile';
 import Grid from '@mui/system/Unstable_Grid/Grid';
 import AddEmployee from 'views/AddEmployee/AddEmployee';
+import Details from 'views/Inbound/Details';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -30,6 +31,7 @@ const Task = Loadable(lazy(() => import('views/Task')));
 const EmailTemplates = Loadable(lazy(() => import('views/EmailTemplates')));
 const Document = Loadable(lazy(() => import('views/Documents')));
 const Calender = Loadable(lazy(() => import('views/Calender')));
+const Inbound = Loadable(lazy(() => import('views/Inbound')));
 const AddTemplates = Loadable(lazy(() => import('views/EmailTemplates/AddTemplates')));
 const OverviewLeadDetail = Loadable(lazy(() => import('views/Lead/OverView')));
 const OverviewContactDetail = Loadable(lazy(() => import('views/Contact/OverView')));
@@ -144,7 +146,24 @@ const MainRoutes = {
         }
       ]
     },
-
+    {
+      path: 'dashboard',
+      children: [
+        {
+          path: 'inbound-calls',
+          element: <Inbound />
+        }
+      ]
+    },
+    {
+      path: 'dashboard',
+      children: [
+        {
+          path: '/dashboard/inbound-calls/view/:id',
+          element: <Details />
+        }
+      ]
+    },
     {
       path: 'dashboard',
       children: [
